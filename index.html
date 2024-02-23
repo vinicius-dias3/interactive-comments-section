@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive comments section</title>
+    <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/variables.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="comments">
+        <div class="comment">
+            <div class="description">
+                <img class="user-image" src="./src/images/avatars/image-amyrobson.png" alt="user-image">
+                <h2 class="user-name">amyrobson</h2>
+                <span class="created-at">1 month ago</span>
+            </div>
+            <p class="content">
+                Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+            </p>
+            <div class="voting-comment">
+                <div class="buttons">
+                    <button id="upvote-btn"><img src="./src/images/icon-plus.svg" alt="icon upvote"></button>
+                    <span id="vote-count">12</span>
+                    <button id="downvote-btn"><img src="./src/images/icon-minus.svg" alt="icon downvote"></button>
+                </div>
+            </div>
+            <div class="tools">
+                <button type="button"><img src="./src/images/icon-reply.svg" alt="icon reply">Reply</button>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="description">
+                <img class="user-image" src="./src/images/avatars/image-maxblagun.png" alt="user-image">
+                <h2 class="user-name">maxblagun</h2>
+                <span class="created-at">2 weeks ago</span>
+            </div>
+            <p class="content">
+                Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+            </p>
+            <div class="voting-comment">
+                <div class="buttons">
+                    <button id="upvote-btn"><img src="./src/images/icon-plus.svg" alt="icon upvote"></button>
+                    <span id="vote-count">5</span>
+                    <button id="downvote-btn"><img src="./src/images/icon-minus.svg" alt="icon downvote"></button>
+                </div>
+            </div>
+            <div class="tools">
+                <button type="button"><img src="./src/images/icon-reply.svg" alt="icon reply">Reply</button>
+            </div>
+        </div>
+
+        <div class="replies">
+            <div class="reply">
+                <div class="description">
+                    <img class="user-image" src="./src/images/avatars/image-ramsesmiron.png" alt="user-image">
+                    <h2 class="user-name">ramsesmiron</h2>
+                    <span class="created-at">1 week ago</span>
+                </div>
+                <p class="content">
+                    <span id="mention">@maxblagun</span>If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+                </p>
+                <div class="voting-comment">
+                    <div class="buttons">
+                        <button id="upvote-btn"><img src="./src/images/icon-plus.svg" alt="icon upvote"></button>
+                        <span id="vote-count">4</span>
+                        <button id="downvote-btn"><img src="./src/images/icon-minus.svg" alt="icon downvote"></button>
+                    </div>
+                </div>
+                <div class="tools">
+                    <button type="button"><img src="./src/images/icon-reply.svg" alt="icon reply">Reply</button>
+                </div>
+                
+            </div>
+            <div class="reply">
+                <div class="description">
+                    <img class="user-image" src="./src/images/avatars/image-juliusomo.png" alt="user-image">
+                    <h2 class="user-name">juliusomo <span id="my-reply">you</span></h2>
+                    <span class="created-at">2 days ago</span>
+                </div>
+                <p class="content">
+                    <span id="mention">@ramsesmiron</span>I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
+                </p>
+                <div class="voting-comment">
+                    <div class="buttons">
+                        <button id="upvote-btn"><img src="./src/images/icon-plus.svg" alt="icon upvote"></button>
+                        <span id="vote-count">2</span>
+                        <button id="downvote-btn"><img src="./src/images/icon-minus.svg" alt="icon downvote"></button>
+                    </div>
+                </div>
+                <div class="tools">
+                    <button type="button" class="btn-del"><img src="./src/images/icon-delete.svg" alt="icon delete">Delete</button>
+                    <button type="button"><img src="./src/images/icon-edit.svg" alt="icon edit">Edit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-to">
+            <textarea placeholder="Add a comment..." id="new-comment"></textarea>
+            <img class="user-image" src="./src/images/avatars/image-juliusomo.png" alt="user-image">
+            <button id="btn-send" type="button">SEND</button>
+        </div>
+        
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

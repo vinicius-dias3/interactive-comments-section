@@ -1,0 +1,10 @@
+:root{
+    --bg-neutral: hsl(231, 70%, 96%);
+    /* --background: hsl(240, 17%, 84%); */
+    --color-comment: hsl(0, 0%, 45%);
+    --bg-comment: white;
+    --alert: #ed6468;
+    /* --user-name: hsl(212, 24%, 26%); */
+    --color-user-name: rgb(45, 51, 57);
+    --highlight-color: hsl(238, 40%, 52%);
+}

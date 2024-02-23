@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body{
+    font-family: "Rubik", sans-serif;
+    background-color: var(--bg-neutral);
+}
+
+.comments{
+    width: 350px;
+    margin: auto;
+    font-weight: 400;
+}
+
+.comments .comment, .comments .reply{
+    background-color: var(--bg-comment);
+    color: var(--color-comment);
+    margin: 15px 0 15px auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    display: grid;
+    grid-template-areas:    "description description"
+                            "content content"
+                            "voting-comment tools";
+}
+
+.comments .description{
+    grid-area: description;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.comments .user-image{
+    /* width: 12%; */
+    width: 35px;
+}
+
+.comments .description .user-name{
+    font-size: 16px;
+    color: var(--color-user-name);
+    font-weight: 500;
+}
+
+.comments .content{
+    grid-area: content;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+
+.comments .voting-comment{
+    grid-area: voting-comment;
+    color: var(--highlight-color);
+    font-weight: 600;
+    display: flex;
+    padding: 8px;
+}
+
+.comments .voting-comment .buttons{
+    padding: 5px 8px 5px 8px;
+    background-color: var(--bg-neutral);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.comments .voting-comment .buttons #downvote-btn{
+    align-self: flex-start;
+}
+
+.comments .tools{
+    grid-area: tools;
+    display: flex;
+    justify-content: end;
+    padding-top: 9px;
+    gap: 24px;
+}
+
+.comments .tools button{
+    font-weight: 600;
+    display: flex;
+    gap: 6px;
+    background-color: inherit;
+    padding-top: 5px;
+}
+
+.comments .tools .btn-del{
+    color: rgba(182, 4, 4, 0.7);
+}
+
+.comments .replies{
+    padding-left: 22px;
+    border-left: 1px rgb(163, 163, 163) solid;
+}
+
+.comments .reply{
+    background-color: var(--bg-comment);
+}
+
+.comments .reply #my-reply{
+    background-color: var(--highlight-color);
+    color: var(--bg-neutral);
+    padding: 0 5px 2px 5px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.comments .reply #mention{
+    color: var(--highlight-color);
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.reply-to{
+    background-color: var(--bg-comment);
+    margin: 15px 0 15px auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    display: grid;
+    grid-template-areas:    "textarea textarea textarea"
+                            "user-image . btn-send";
+    grid-row-gap: 20px;
+}
+
+.reply-to textarea#new-comment{
+    resize: none;
+    border: 1px rgb(163, 163, 163) solid;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 14px;
+    height: 90px;
+    width: 100%;
+    grid-area: textarea;
+}
+
+.reply-to .user-image{
+    grid-area: user-image;
+}
+
+.reply-to #btn-send{
+    color: white;
+    background-color: var(--highlight-color);
+    /* padding: 12px 15px; */
+    border-radius: 4px;
+    font-weight: 600;
+    grid-area: btn-send;
+}
